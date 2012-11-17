@@ -15,7 +15,7 @@
 	<nav>
 		<table>
 			<tr>
-				<th colspan="3">
+				<th colspan=<%= current_admin_user ? "3" : "2" %> >
 					<h1><span class= "two">2</span>nd Hand Soldiers</h1>
 				</th>
 			</tr>
@@ -23,11 +23,16 @@
 				<td><%= link_to("Home", root_path) %></td>
 				<td><%= link_to("Upcoming Events", events_path) %></td>
 				<td><%= link_to("The Soldiers", band_members_path) %></td>
+				<% if current_admin_user %>
+					<td><%= link_to("Admin", admin_dashboard_path) %></td>
+				<% end %>
 			</tr>	
 		</table>
 	</nav>
 
 <%= yield %>
+
+<%= yield :scripts %> <!-- gmaps for rails -->
 
 </div>
 </body>

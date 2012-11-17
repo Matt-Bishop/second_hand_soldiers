@@ -1,2 +1,12 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<h2><%= @event.name if @event.name%></h2>
+<ul>
+	<li><%= full_address(@event) %></li>
+	<li><%= @event.date.strftime("%I:%M %p %A, %B %d") %></li>
+	<% if @event.description %>
+		<li>
+			<%= @event.description %>
+		</li>
+	<% end %>
+</ul>
+
+<%= gmaps4rails(@event_map) %>

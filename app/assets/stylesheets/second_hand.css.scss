@@ -57,12 +57,9 @@ nav{
 	}
 	table{
 		width: 70%;
-		tr.primary_nav{
-			
-			float:left;
-		}
-		td{
-			text-align: center;
-		}
+		tr.primary_nav{	float:left; }
+		td{	text-align: center;	}
 	}
 }
+
+ul{list-style: none;}
