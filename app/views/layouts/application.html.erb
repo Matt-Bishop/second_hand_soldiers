@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SecondHandSoldiers</title>
+  <title>2nd Hand Soldiers</title>
+  <!-- ###### FONTS ###### -->
+  <link href='http://fonts.googleapis.com/css?family=Paprika' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Antic+Slab' rel='stylesheet' type='text/css'>
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="wrapper">
+	<nav>
+		<table>
+			<tr>
+				<th colspan="3">
+					<h1><span class= "two">2</span>nd Hand Soldiers</h1>
+				</th>
+			</tr>
+			<tr id="primary_nav">
+				<td><%= link_to("Home", root_path) %></td>
+				<td><%= link_to("Upcoming Events", events_path) %></td>
+				<td><%= link_to("The Soldiers", band_members_path) %></td>
+			</tr>	
+		</table>
+	</nav>
 
 <%= yield %>
 
+</div>
 </body>
 </html>

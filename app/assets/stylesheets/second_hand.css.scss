@@ -1,0 +1,68 @@
+@import "variables";
+@font-face {
+    font-family: boston;
+    src:url('boston.ttf');
+    //src: url(http://www.font-face.com/fonts/delicious/Delicious-Roman.otf);
+    // font-weight:400;
+}
+
+#wrapper{
+	width:980px;
+	margin: auto;
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow:    0 0 20px rgba(0, 0, 0, 0.75);
+	box-shadow:         0 0 20px rgba(0, 0, 0, 0.75);
+	min-height: 800px;
+}
+
+body{
+	font-family: 'Antic Slab';
+}
+
+h1{
+	text-transform:capitalize;
+	font-size: 45px;
+	float: left;
+	color: $white;
+	
+}
+
+.two{
+	font-size: 96px;
+}
+
+nav{
+	font-family: 'boston' ;
+	font-size: 25px;
+
+	/* ##### Rasta Gradient ##### */
+	background: #050201; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #050201 65%, #f73f2e 77%, #f73f2e 77%, #eaea35 89%, #6bc66f 100%, #6bc66f 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(65%,#050201), color-stop(77%,#f73f2e), color-stop(77%,#f73f2e), color-stop(89%,#eaea35), color-stop(100%,#6bc66f), color-stop(100%,#6bc66f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #050201 65%,#f73f2e 77%,#f73f2e 77%,#eaea35 89%,#6bc66f 100%,#6bc66f 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #050201 65%,#f73f2e 77%,#f73f2e 77%,#eaea35 89%,#6bc66f 100%,#6bc66f 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #050201 65%,#f73f2e 77%,#f73f2e 77%,#eaea35 89%,#6bc66f 100%,#6bc66f 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #050201 65%,#f73f2e 77%,#f73f2e 77%,#eaea35 89%,#6bc66f 100%,#6bc66f 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050201', endColorstr='#6bc66f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	color: $white;
+	h1{
+		text-indent: 12px;
+	}
+	a{
+		text-decoration: none;
+		&:link{color: $white;}
+		&:visited{color: $white;}
+		&:hover{}
+		&:active{}
+	}
+	table{
+		width: 70%;
+		tr.primary_nav{
+			
+			float:left;
+		}
+		td{
+			text-align: center;
+		}
+	}
+}
