@@ -4,7 +4,7 @@
  
 <% @band_members.each do |member| %>
   <ul>
-    <li><%= member.name %> | <%= member.role %></li>
+    <li><%= link_to("#{member.name}", band_member_path(member.id)) %> | <%= member.role %></li>
     <li><%= member.description %></li>
   </ul>
   <br/>
