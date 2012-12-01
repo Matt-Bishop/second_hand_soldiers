@@ -11,27 +11,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<!-- facebook -->
+<div id="fb-root"></div>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=380065232030485";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div id="wrapper">
 	<nav>
-		<table>
-			<tr>
-				<th colspan=<%= current_admin_user ? "3" : "2" %> >
-					<h1><span class= "two">2</span>nd Hand Soldiers</h1>
-				</th>
-			</tr>
-			<tr id="primary_nav">
-				<td><%= link_to("Home", root_path) %></td>
-				<td><%= link_to("Upcoming Events", events_path) %></td>
-				<td><%= link_to("The Soldiers", band_members_path) %></td>
+			<div id= "second_hand"><h1><span class= "two">2</span>nd Hand Soldiers</h1></div>
+		
+			<div id="primary_nav">
+				<div class="nav_item first_link"><%= link_to("Home", root_path) %></div>
+				<div class="nav_item second_link"><%= link_to("Upcoming Events", events_path) %></div>
+				<div class="nav_item third_link"><%= link_to("The Soldiers", band_members_path) %></div>
 				<% if current_admin_user %>
-					<td><%= link_to("Admin", admin_dashboard_path) %></td>
+					<div class="nav_item fourth_link"><%= link_to("Admin", admin_dashboard_path) %></div>
 				<% end %>
-			</tr>	
-		</table>
+			</div>
 	</nav>
 
 <%= yield %>
-
+<footer>
+<!-- facebook -->
+<div class="fb-like" data-href="https://www.facebook.com/pages/2nd-Hand-Soldiers/131321730272572" data-send="false" data-width="450" data-show-faces="true"></div>
+</footer>
 <%= yield :scripts %> <!-- gmaps for rails -->
 
 </div>

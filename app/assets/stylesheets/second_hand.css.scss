@@ -6,25 +6,37 @@
     // font-weight:400;
 }
 
-#wrapper{
-	width:980px;
-	margin: auto;
-	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow:    0 0 20px rgba(0, 0, 0, 0.75);
-	box-shadow:         0 0 20px rgba(0, 0, 0, 0.75);
-	min-height: 800px;
+// /*
+// =================================================================================
+// Mixins
+// =================================================================================
+// */
+
+@mixin rotate($deg) {
+	transform:rotate($deg);
+	-ms-transform:rotate($deg); /* IE 9 */
+	-moz-transform:rotate($deg); /* Firefox */
+	-webkit-transform:rotate($deg); /* Safari and Chrome */
+	-o-transform:rotate($deg); /* Opera */
 }
 
-body{
-	font-family: 'Antic Slab';
-}
+// /*
+// =================================================================================
+// Header & Nav
+// =================================================================================
+// */
 
-h1{
-	text-transform:capitalize;
-	font-size: 45px;
-	float: left;
-	color: $white;
-	
+#second_hand{
+	transform:rotate(7deg);
+	-ms-transform:rotate(7deg); /* IE 9 */
+	-moz-transform:rotate(7deg); /* Firefox */
+	-webkit-transform:rotate(7deg); /* Safari and Chrome */
+	-o-transform:rotate(7deg); /* Opera */
+	//text-shadow: 0px 8px 4px #666;
+
+	/*Fire effect*/
+	//text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+	text-shadow: 0px 8px 4px #666;
 }
 
 .two{
@@ -34,6 +46,7 @@ h1{
 nav{
 	font-family: 'boston' ;
 	font-size: 25px;
+	min-height: 230px;
 
 	/* ##### Rasta Gradient ##### */
 	background: #050201; /* Old browsers */
@@ -44,22 +57,83 @@ nav{
 	background: -ms-linear-gradient(-45deg,  #050201 65%,#f73f2e 77%,#f73f2e 77%,#eaea35 89%,#6bc66f 100%,#6bc66f 100%); /* IE10+ */
 	background: linear-gradient(135deg,  #050201 65%,#f73f2e 77%,#f73f2e 77%,#eaea35 89%,#6bc66f 100%,#6bc66f 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#050201', endColorstr='#6bc66f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	color: $white;
+	color: white;
 	h1{
 		text-indent: 12px;
 	}
 	a{
 		text-decoration: none;
-		&:link{color: $white;}
-		&:visited{color: $white;}
+		&:link{color: white;}
+		&:visited{color: white;}
 		&:hover{}
 		&:active{}
 	}
-	table{
-		width: 70%;
-		tr.primary_nav{	float:left; }
-		td{	text-align: center;	}
-	}
 }
 
-ul{list-style: none;}
+#primary_nav{
+	padding-top: 185px;
+}
+
+.nav_item{
+	float: left;
+	padding: 10px 10px 10px 10px;
+	margin: -8px 0px 15px 15px;
+	-webkit-box-shadow: 0 0 20px #fff;
+	-moz-box-shadow:    0 0 20px #fff;
+	box-shadow:         0 0 20px #fff;
+}
+
+.first_link{  @include rotate(3deg) }
+.second_link{ @include rotate(1deg) }
+.third_link{  @include rotate(-4deg)}
+.fourth_link{ @include rotate(3deg) }
+
+// /*
+// =================================================================================
+// Structure $ Body
+// =================================================================================
+// */
+
+.left{float:left;}
+.right{float:right;}
+
+h1{
+	text-transform:capitalize;
+	font-size: 45px;
+	float: left;
+	color: white;
+}
+
+#wrapper{
+	width:980px;
+	margin: auto;
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow:    0 0 20px rgba(0, 0, 0, 0.75);
+	box-shadow:         0 0 20px rgba(0, 0, 0, 0.75);
+	min-height: 900px;
+	background:	#fff;
+	padding: 0px 0px 12px 0px;
+}
+
+body{
+	background: url('../assets/bckg.jpg');
+	font-family: 'Antic Slab';
+}
+
+img{
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow:    0 0 20px rgba(0, 0, 0, 0.75);
+	box-shadow:         0 0 20px rgba(0, 0, 0, 0.75);
+}
+
+section{padding: 10px 6px 6px 6px;}
+
+
+
+// /*
+// =================================================================================
+// Footer
+// =================================================================================
+// */
+
+footer{clear:both;}

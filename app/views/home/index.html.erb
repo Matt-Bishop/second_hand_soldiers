@@ -1,3 +1,29 @@
+<section>
+<div class="right">
+	<%= image_tag("singing.jpg") %>
+	<div>
+		<h2>Upcoming Events</h2>
+		<ul>
+		<% @events.each do |e| %>
+		<li>
+			<%= link_to("#{e.name}, #{e.city}, #{e.date.strftime("%A, %B %d")}", event_path(e)) %>
+		</li>
+		<% end %>
+		</ul>
+	</div>
+</div>
 
 
-This Is the Home page
+
+<div >
+<p>	Lorem ipsum dolor sit amet, cum corpora oporteat ad, eam eu doctus platonem neglegentur. Eam omnes audiam accumsan ex, timeam aliquip splendide mei eu. Ex his erat mnesarchum. Vix ut stet adhuc forensibus, an euismod recusabo quo.
+	Mei corrumpit disputando et, vel invenire assueverit scriptorem ut, fugit referrentur vel ex. Cu posse summo elitr usu, mel latine commodo phaedrum et. Simul adversarium sit cu. Cu eum homero reformidans voluptatibus, definiebas comprehensam conclusionemque nec in, duo eripuit expetenda principes in.</p>
+
+<p>Lorem ipsum dolor sit amet, cum corpora oporteat ad, eam eu doctus platonem neglegentur. Eam omnes audiam accumsan ex, timeam aliquip splendide mei eu. Ex his erat mnesarchum. Vix ut stet adhuc forensibus, an euismod recusabo quo.</p>
+
+<p>Inani periculis appellantur his ad, clita posidonium mei te, vis epicurei ponderum scriptorem cu. Cum harum nominati temporibus eu. Ex stet vivendum qualisque quo, vel ne nibh sale vituperatoribus. Vocibus definiebas has ei, ea mel qualisque interesset. Quo labitur vituperata persequeris ex, eos te duis solum eloquentiam, ferri mollis scriptorem mel et.</p>
+
+<p>Vis ut illum omittantur, partem accumsan corrumpit pro ex, cu his aliquam consulatu. Est disputando definitionem cu. His te unum delicata repudiandae, ceteros maiestatis te mea. Ius vocibus disputando ullamcorper ex, alterum euripidis vix ad. Eius nonumy mei cu.</p>
+</div>	
+
+</section>
